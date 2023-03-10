@@ -39,7 +39,10 @@ public class Movement : MonoBehaviour
         {
             animate.SetBool("Jumping", true);
             rb.AddForce(new Vector2(rb.velocity.x, jump));
-            animate.SetBool("Jumping", false);
+            if(isGrounded())
+            {
+                animate.SetBool("Jumping", false);
+            }
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
