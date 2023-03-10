@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     public float speed;
     public float jump;
     private bool isFacingRight = true;
+    public Animator animate;
 
     private Rigidbody2D rb;
 
@@ -32,11 +33,13 @@ public class Movement : MonoBehaviour
     {
         Move = Input.GetAxis("Horizontal");
         FlipSprite();
+        animate.SetFloat("Speed", Mathf.Abs(Move));
         rb.velocity = new Vector2(Move * speed, rb.velocity.y);
-
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
+            animate.SetBool("Jumping", true);
             rb.AddForce(new Vector2(rb.velocity.x, jump));
+            animate.SetBool("Jumping", false);
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
