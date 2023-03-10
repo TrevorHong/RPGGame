@@ -35,27 +35,20 @@ public class Movement : MonoBehaviour
         FlipSprite();
         animate.SetFloat("Speed", Mathf.Abs(Move));
         rb.velocity = new Vector2(Move * speed, rb.velocity.y);
+
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
             animate.SetBool("Jumping", true);
             rb.AddForce(new Vector2(rb.velocity.x, jump));
-            if(isGrounded())
-            {
-                animate.SetBool("Jumping", false);
-            }
+        } else if  (isGrounded() && rb.velocity.y < 0.1f) {
+            animate.SetBool("Jumping", false);
         }
-
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
-
 
     }
 
     private bool isGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        return Physics2D.OverlapCircle(new Vector3(groundCheck.position.x, groundCheck.position.y - 0.35f, groundCheck.position.z), 0.08f, groundLayer);
     }
 
     private void FlipSprite()
