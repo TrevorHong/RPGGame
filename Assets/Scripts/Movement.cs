@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private AudioSource jumpSound;
 
 
     // Start is called before the first frame update
@@ -38,6 +39,7 @@ public class Movement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
+            jumpSound.Play();
             animate.SetBool("Jumping", true);
             rb.AddForce(new Vector2(rb.velocity.x, jump));
         } else if  (isGrounded() && rb.velocity.y < 0.1f) {
