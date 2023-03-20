@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     private float Move;
     public float speed;
     public float jump;
+    public float maxMagnitude;
     private bool isFacingRight = true;
     public Animator animate;
 
@@ -34,12 +35,15 @@ public class Movement : MonoBehaviour
         Move = Input.GetAxis("Horizontal");
         FlipSprite();
         animate.SetFloat("Speed", Mathf.Abs(Move));
-        rb.velocity = new Vector2(Move * speed, rb.velocity.y);
+        rb.velocity = Vector2.ClampMagnitude(new Vector2(Move * speed, rb.velocity.y), maxMagnitude);
+
 
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
             animate.SetBool("Jumping", true);
             rb.AddForce(new Vector2(rb.velocity.x, jump));
+
+           
         } else if  (isGrounded() && rb.velocity.y < 0.1f) {
             animate.SetBool("Jumping", false);
         }
