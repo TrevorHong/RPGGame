@@ -26,6 +26,7 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private AudioSource jumpSound;
 
 
     // Start is called before the first frame update
@@ -45,8 +46,9 @@ public class Movement : MonoBehaviour
         {
             rb.velocity = Vector2.ClampMagnitude(new Vector2(Move * speed, rb.velocity.y), 50);
         } else
-        {
+        {          
             rb.velocity = Vector2.ClampMagnitude(new Vector2(Move * speed, rb.velocity.y), maxMagnitude);
+
         }
         
         if (Input.GetAxisRaw("Vertical") < 0 && platformCollider != null)
@@ -64,6 +66,7 @@ public class Movement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded() && !trampolineJump)
         {
+            jumpSound.Play();
             animate.SetBool("Jumping", true);
             rb.AddForce(new Vector2(rb.velocity.x, jump));
            

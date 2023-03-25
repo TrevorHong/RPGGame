@@ -12,6 +12,7 @@ public class Attack : MonoBehaviour
     public Transform attackpos;
     public float range = 0.5f;
     public LayerMask enemies;
+    [SerializeField] private AudioSource attackSound;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class Attack : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1"))
         {
+            attackSound.Play();
             animate.SetTrigger("Attacking");
             MeleeAttack();
         }
