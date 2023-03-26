@@ -10,10 +10,10 @@ public class DisappearingCollider : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.name == "Gem")
         {
             collectSound.Play();
-            gameObject.SetActive(false);
+            Destroy(collision.gameObject);
         }
     }
 }
