@@ -24,17 +24,18 @@ public class EnemyPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        walkAmt.x = walkingDirection * speed * Time.deltaTime;
-        if (walkingDirection > 0.0f && transform.position.x >= wallRight)
-        {
-            walkingDirection = -1.0f;
-        }
-        else if (walkingDirection < 0.0f && transform.position.x <= wallLeft)
-        {
-            walkingDirection = 1.0f;
-        }
-        transform.Translate(walkAmt);
-        FlipSprite();
+
+            walkAmt.x = walkingDirection * speed * Time.deltaTime;
+            if (walkingDirection > 0.0f && transform.position.x >= wallRight)
+            {
+                walkingDirection = -1.0f;
+            }
+            else if (walkingDirection < 0.0f && transform.position.x <= wallLeft)
+            {
+                walkingDirection = 1.0f;
+            }
+            transform.Translate(walkAmt);
+            FlipSprite();
     }
 
     private void FlipSprite()
