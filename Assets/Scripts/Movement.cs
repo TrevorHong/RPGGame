@@ -18,6 +18,8 @@ public class Movement : MonoBehaviour
     private bool isFacingRight = true;
     public Animator animate;
 
+    public bool canMove;
+
     private bool trampolineJump = false;
     private Collider2D platformCollider;
 
@@ -39,9 +41,14 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move = Input.GetAxis("Horizontal");
+        if(canMove)
+        {
+            Move = Input.GetAxis("Horizontal");
+            animate.SetFloat("Speed", Mathf.Abs(Move));
+
+        }
         FlipSprite();
-        animate.SetFloat("Speed", Mathf.Abs(Move));
+
         if (trampolineJump)
         {
             rb.velocity = Vector2.ClampMagnitude(new Vector2(Move * speed, rb.velocity.y), 50);
@@ -51,20 +58,13 @@ public class Movement : MonoBehaviour
 
         }
         
-        if (Input.GetAxisRaw("Vertical") < 0 && platformCollider != null)
+        if (Input.GetAxisRaw("Vertical") < 0 && platformCollider != null && canMove == true)
         {
             platformCollider.enabled = false;
         } 
         
-        //if (isGrounded() && Input.GetAxisRaw("Vertical") == 0)
-        //{
-        //    platformTime = 0;
-        //} else if (!isGrounded() && Input.GetAxisRaw("Vertical") == 0)
-        //{
-        //    platformTime += Time.deltaTime;
-        //}
 
-        if (Input.GetButtonDown("Jump") && isGrounded() && !trampolineJump)
+        if (Input.GetButtonDown("Jump") && isGrounded() && !trampolineJump && canMove == true)
         {
             jumpSound.Play();
             animate.SetBool("Jumping", true);

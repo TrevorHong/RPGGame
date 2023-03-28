@@ -2823,7 +2823,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.009307861, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2834,7 +2834,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.62, y: 0.51}
+  m_Size: {x: 0.37055588, y: 0.51}
   m_EdgeRadius: 0
 --- !u!1 &349375715
 GameObject:
@@ -3461,7 +3461,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 904.4352, y: 517.3774}
+  m_AnchoredPosition: {x: 904.36, y: 517.3774}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &405131510
@@ -11678,6 +11678,7 @@ MonoBehaviour:
   jump: 500
   maxMagnitude: 10
   animate: {fileID: 1786570147}
+  canMove: 1
   groundCheck: {fileID: 1786570144}
   groundLayer:
     serializedVersion: 2
@@ -11926,7 +11927,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4a08828409e3a0245b80b028c6edfeef, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.241
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12046,6 +12047,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fed24bd82cefc0c4a8ef64dab6231b53, type: 3}
   filled: {fileID: 21300000, guid: fed24bd82cefc0c4a8ef64dab6231b53, type: 3}
   empty: {fileID: 21300002, guid: fed24bd82cefc0c4a8ef64dab6231b53, type: 3}
+  animate: {fileID: 1786570147}
+  movecheck: {fileID: 1786570145}
+  duration: 1
+  flash: 1
+  rb: {fileID: 1786570141}
 --- !u!1 &1820307530
 GameObject:
   m_ObjectHideFlags: 0
@@ -12900,7 +12906,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.08233833, y: -0.076313645}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -12911,7 +12917,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7, y: 0.51}
+  m_Size: {x: 0.4710617, y: 0.3573727}
   m_EdgeRadius: 0
 --- !u!114 &1965268534
 MonoBehaviour:
