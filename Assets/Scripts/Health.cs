@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -18,10 +20,13 @@ public class Health : MonoBehaviour
     public Movement movecheck;
 
 
-    [SerializeField] private float duration;
+    [SerializeField] private int duration;
     private SpriteRenderer sprite;
     [SerializeField] private int flash;
     public Rigidbody2D rb;
+
+    private bool invuln = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,29 +51,35 @@ public class Health : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 8)
+        if (collision.gameObject.layer == 8 && !invuln)
         {
             health -= 1;
-            rb.AddForce(new Vector2(2500f, 300f));
+            rb.AddForce(new Vector2(2500f * collision.gameObject.GetComponent<EnemyPatrol>().walkingDirection, 300f));
             animate.SetBool("Jumping", true);
-            StartCoroutine(IFrames());
-            animate.SetBool("Jumping", false);
+            IFrames();
         }
     }
 
-    private IEnumerator IFrames()
+    async void IFrames()
     {
+        invuln = true;
         movecheck.canMove = false;
         movecheck.speed = 0;
         Physics2D.IgnoreLayerCollision(7, 9, true);
         for (int i = 0; i < flash; i++)
         {
             sprite.color = Color.gray;
-            yield return new WaitForSeconds(1);
+            await Task.Delay(duration);
             sprite.color = Color.white;
-            yield return new WaitForSeconds(1);
+            await Task.Delay(duration);
+
+            if (i == flash / 2)
+            {
+                Physics2D.IgnoreLayerCollision(7, 9, false);
+                movecheck.speed = 4;
+                movecheck.canMove = true;
+            }
         }
-        Physics2D.IgnoreLayerCollision(7, 9, false);
-        movecheck.canMove = true;
+        invuln = false;
     }
 }

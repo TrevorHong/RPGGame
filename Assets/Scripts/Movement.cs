@@ -41,7 +41,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(canMove)
+        if(canMove == true)
         {
             Move = Input.GetAxis("Horizontal");
             animate.SetFloat("Speed", Mathf.Abs(Move));
