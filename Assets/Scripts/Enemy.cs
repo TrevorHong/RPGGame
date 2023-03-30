@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-
     private float moveSpeed = 2f;
     private Rigidbody2D rb;
     private Transform target;

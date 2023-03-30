@@ -9,7 +9,9 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-
+    /// <summary>
+    /// Player Health, contains sprite information for the health bar on the top left.
+    /// </summary>
     public float health;
     public SpriteRenderer[] spriteRenderer;
     public Sprite[] healthbar;
@@ -49,6 +51,8 @@ public class Health : MonoBehaviour
         }
     }
 
+    ///Checks for collisions based on enemy layer, 8 being the Enemy layer and 7 being the Trap layer, in order to work the player must also not
+    ///be in invulnerability frames, which is the function called below "IFrames"
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 8 && !invuln)
@@ -63,7 +67,9 @@ public class Health : MonoBehaviour
             health -= 1;
         }
     }
-
+    /// Async function to check whether or not a player will ignore layer collision for the selected layers, between 7 and 9, the player
+    /// will also flash when hit by an enemy to show the user when the player cannot take damage. The player cannot move for a short duration after
+    /// being hit.
     async void IFrames()
     {
         invuln = true;
