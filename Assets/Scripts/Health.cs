@@ -58,6 +58,10 @@ public class Health : MonoBehaviour
             animate.SetBool("Jumping", true);
             IFrames();
         }
+        if (collision.gameObject.layer == 7 && !invuln)
+        {
+            health -= 1;
+        }
     }
 
     async void IFrames()
