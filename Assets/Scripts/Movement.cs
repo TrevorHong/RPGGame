@@ -70,7 +70,7 @@ public class Movement : MonoBehaviour
             animate.SetBool("Jumping", true);
             rb.AddForce(new Vector2(rb.velocity.x, jump));
            
-        } else if  (isGrounded() && rb.velocity.y < 0.1f) {
+        } else if  (isGrounded() || rb.velocity.y < 0.1f) {
             trampolineJump = false;
             animate.SetBool("Jumping", false);
         }
