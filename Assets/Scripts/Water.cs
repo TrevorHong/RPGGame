@@ -12,7 +12,8 @@ public class Water : MonoBehaviour
         {
             waterSound.Play();
             Rigidbody2D playerBody = collision.gameObject.GetComponent<Rigidbody2D>();
-            playerBody.gravityScale = 4;
+            playerBody.gravityScale = 2;
+            playerBody.drag = 5;
         }
     }
 
@@ -22,6 +23,7 @@ public class Water : MonoBehaviour
         {
             Rigidbody2D playerBody = collision.gameObject.GetComponent<Rigidbody2D>();
             playerBody.gravityScale = 3;
+            playerBody.drag = 1;
         }
     }
 }
