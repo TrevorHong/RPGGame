@@ -2657,7 +2657,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348189643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.72, y: -2.16, z: 0}
+  m_LocalPosition: {x: 2.27, y: -2.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2748,11 +2748,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b09a32db1e322fc4d947d021124e56a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 348189644}
   leftBound: 0.6
   rightBound: 0.6
   speed: 0.75
   walkingDirection: 1
+  player: {fileID: 1786570144}
+  chaseRange: 3
+  moveSpeed: 1.25
 --- !u!61 &348189649
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3803,7 +3805,7 @@ GameObject:
   - component: {fileID: 529181512}
   - component: {fileID: 529181513}
   m_Layer: 8
-  m_Name: attack1_0
+  m_Name: balrog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3914,13 +3916,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529181507}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.31, y: 0.08, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 54.655617, y: 0.37079072, z: 0.45479554}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 2034887634}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &529181512
 MonoBehaviour:
@@ -3934,11 +3936,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b09a32db1e322fc4d947d021124e56a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 529181511}
   leftBound: 0.6
   rightBound: 0.6
   speed: 1.25
   walkingDirection: 1
+  player: {fileID: 1786570144}
+  chaseRange: 5
+  moveSpeed: 1.5
 --- !u!114 &529181513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3981,12 +3985,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 535538651}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.332, y: -2.15, z: 0}
+  m_LocalPosition: {x: 15.96, y: -2.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2034887634}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &535538653
 MonoBehaviour:
@@ -4013,11 +4017,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b09a32db1e322fc4d947d021124e56a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 535538652}
   leftBound: 0.6
   rightBound: 0.4
   speed: 0.75
   walkingDirection: 1
+  player: {fileID: 1786570144}
+  chaseRange: 3
+  moveSpeed: 1.25
 --- !u!61 &535538655
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12277,7 +12283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786570140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.68, y: -2.17, z: 0}
+  m_LocalPosition: {x: -37.541, y: -2.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13439,7 +13445,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965268527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.88, y: -0.43, z: 0}
+  m_LocalPosition: {x: 33.42, y: -2.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13556,11 +13562,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b09a32db1e322fc4d947d021124e56a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1965268528}
   leftBound: 0.6
   rightBound: 0.6
   speed: 1
   walkingDirection: 1
+  player: {fileID: 1786570144}
+  chaseRange: 4
+  moveSpeed: 1.5
 --- !u!1 &1973868896
 GameObject:
   m_ObjectHideFlags: 0
@@ -13959,11 +13967,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b09a32db1e322fc4d947d021124e56a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1996803935}
   leftBound: 3
   rightBound: 1
   speed: 0.5
   walkingDirection: 1
+  player: {fileID: 1786570144}
+  chaseRange: 2
+  moveSpeed: 1.25
 --- !u!61 &1996803939
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14125,6 +14135,7 @@ Transform:
   - {fileID: 1965268528}
   - {fileID: 348189644}
   - {fileID: 1996803935}
+  - {fileID: 529181511}
   - {fileID: 535538652}
   m_Father: {fileID: 0}
   m_RootOrder: 8
