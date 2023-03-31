@@ -26,6 +26,7 @@ public class Health : MonoBehaviour
     private SpriteRenderer sprite;
     [SerializeField] private int flash;
     public Rigidbody2D rb;
+    [SerializeField] private AudioSource damageSound;
 
     private bool invuln = false;
 
@@ -61,10 +62,12 @@ public class Health : MonoBehaviour
             rb.AddForce(new Vector2(2500f * collision.gameObject.GetComponent<EnemyPatrol>().walkingDirection, 300f));
             animate.SetBool("Jumping", true);
             IFrames();
+            damageSound.Play();
         }
         if (collision.gameObject.layer == 7 && !invuln)
         {
             health -= 1;
+            damageSound.Play();
         }
     }
     /// Async function to check whether or not a player will ignore layer collision for the selected layers, between 7 and 9, the player
