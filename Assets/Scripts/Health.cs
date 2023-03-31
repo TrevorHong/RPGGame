@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -39,15 +40,22 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < healthbar.Length; i++)
+        if (health == 0)
         {
-            if (i < health)
+            SceneManager.LoadScene("DeathScreen");
+        }
+        else
+        {
+            for (int i = 0; i < healthbar.Length; i++)
             {
-                spriteRenderer[i].sprite = filled;
-            }
-            else
-            {   
-                spriteRenderer[i].sprite = empty;
+                if (i < health)
+                {
+                    spriteRenderer[i].sprite = filled;
+                }
+                else
+                {
+                    spriteRenderer[i].sprite = empty;
+                }
             }
         }
     }
