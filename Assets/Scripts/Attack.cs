@@ -10,14 +10,13 @@ public class Attack : MonoBehaviour
     /// Player attack.
     /// </summary>
     public Animator animate;
+    public Animator slash;
 
     public Transform attackpos;
     public float range = 0.5f;
     public LayerMask enemies;
     private float cooldown = 1.0f;
     private float attacktime = 0f;
-
-    private EnemyHit damages;
 
     [SerializeField] private AudioSource attackSound;
 
@@ -36,8 +35,10 @@ public class Attack : MonoBehaviour
         {       
             attackSound.Play();
             animate.SetTrigger("Attacking");
+            slash.SetBool("AttackingSlash", true);
             MeleeAttack();
             attacktime = timecheck;
+            slash.SetBool("AttackingSlash", false);
         }
     }
     void MeleeAttack()
@@ -48,7 +49,7 @@ public class Attack : MonoBehaviour
         foreach (Collider2D enemy in attackhit)
         {
             enemy.GetComponent<EnemyHit>().hitpoints -= 1;
-            Debug.Log(enemy.GetComponent<EnemyHit>().hitpoints);
+            enemy.GetComponent<EnemyHit>().hit = true;
         }
 
     }

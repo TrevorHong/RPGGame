@@ -42,7 +42,6 @@ public class EnemyPatrol : MonoBehaviour
 
     private void ChasePlayer()
     {
-
         chaseAmt.x = walkingDirection * moveSpeed * Time.deltaTime;
         if (transform.position.x > player.position.x)
         {
