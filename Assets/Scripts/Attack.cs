@@ -35,10 +35,9 @@ public class Attack : MonoBehaviour
         {       
             attackSound.Play();
             animate.SetTrigger("Attacking");
-            slash.SetBool("AttackingSlash", true);
+            slash.SetTrigger("AttackingSlash");
             MeleeAttack();
             attacktime = timecheck;
-            slash.SetBool("AttackingSlash", false);
         }
     }
     void MeleeAttack()

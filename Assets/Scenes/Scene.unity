@@ -1053,7 +1053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 154457535}
   - component: {fileID: 154457534}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset-sliced_52
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2554,7 +2554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 340210415}
   - component: {fileID: 340210416}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset-sliced_56
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3421,7 +3421,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 903.92, y: 517.69}
+  m_AnchoredPosition: {x: 903.9408, y: 517.03986}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &405131510
@@ -5157,7 +5157,8 @@ GameObject:
   m_Component:
   - component: {fileID: 745384635}
   - component: {fileID: 745384636}
-  m_Layer: 0
+  - component: {fileID: 745384637}
+  m_Layer: 6
   m_Name: tileset-sliced_50 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5231,6 +5232,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &745384637
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745384634}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.06720656, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 3.2, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.3343673, y: 0.16}
+  m_EdgeRadius: 0
 --- !u!1 &749501046
 GameObject:
   m_ObjectHideFlags: 0
@@ -6106,7 +6133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 955837402}
   - component: {fileID: 955837403}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset-sliced_77 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8815,7 +8842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1344533548}
   - component: {fileID: 1344533549}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset-sliced_77
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12502,7 +12529,7 @@ MonoBehaviour:
   animate: {fileID: 1786570147}
   slash: {fileID: 1869140020}
   attackpos: {fileID: 173727671}
-  range: 0.44
+  range: 0.55
   enemies:
     serializedVersion: 2
     m_Bits: 256
@@ -13283,7 +13310,7 @@ GameObject:
   - component: {fileID: 1869140019}
   - component: {fileID: 1869140021}
   - component: {fileID: 1869140020}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Slash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13298,8 +13325,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869140018}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.345, y: -0.04, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.231, y: -0.01, z: 0}
+  m_LocalScale: {x: 0.8407043, y: 0.8407043, z: 0.8407043}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1786570144}
@@ -13365,10 +13392,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 4a63db01e3dff914abd24e6aa4a030fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -13958,7 +13985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1991956484}
   - component: {fileID: 1991956485}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset-sliced_74
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14701,7 +14728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2145518326}
   - component: {fileID: 2145518327}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset-sliced_50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
