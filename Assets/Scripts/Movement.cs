@@ -98,6 +98,12 @@ public class Movement : MonoBehaviour
             platformCollider = null;
         }
 
+        if (collision.gameObject.name.Contains("Trampoline"))
+        {
+            trampolineJump = true;
+            animate.SetBool("Jumping", true);
+        }
+
     }
 
     async void enablePlatform(Collider2D platform)

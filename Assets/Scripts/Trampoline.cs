@@ -26,6 +26,8 @@ public class Trampoline : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             animate.SetBool("Touched", false);
+            Rigidbody2D playerBody = collision.gameObject.GetComponent<Rigidbody2D>();
+            playerBody.velocity = Vector2.ClampMagnitude(new Vector2(playerBody.velocity.x, jump), jump);
         }
     }
 }
