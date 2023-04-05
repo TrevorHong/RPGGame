@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Enemy patrol and chasing script.
+/// </summary>
 public class EnemyPatrol : MonoBehaviour
 {
     public float leftBound;
@@ -16,8 +19,8 @@ public class EnemyPatrol : MonoBehaviour
     [SerializeField] float chaseRange;
     [SerializeField] public float moveSpeed;
     Vector2 chaseAmt;
-
     [SerializeField] Transform point;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +42,7 @@ public class EnemyPatrol : MonoBehaviour
         }
     }
 
+    // Chase player by increasing the movement speed
     private void ChasePlayer()
     {
         chaseAmt.x = walkingDirection * moveSpeed * Time.deltaTime;
@@ -54,6 +58,7 @@ public class EnemyPatrol : MonoBehaviour
         FlipSprite();
     }
 
+    // If player is not in chase range, enemy stops chasing and goes back to normal patrolling route
     private void StopChasing()
     {
         walkAmt.x = walkingDirection * speed * Time.deltaTime;
@@ -69,6 +74,7 @@ public class EnemyPatrol : MonoBehaviour
         FlipSprite();
     }
 
+    // Using a Raycast line to check if the player is touching the line, and returns true if the player is touching the line
     bool CanSeePlayer(float distance)
     {
         bool val = false;
@@ -101,6 +107,7 @@ public class EnemyPatrol : MonoBehaviour
         return val;
     }
 
+    // Flips the sprite depending on the mob walking direction
     private void FlipSprite()
     {
         if (isFacingRight && walkingDirection < 0f || !isFacingRight && walkingDirection > 0f)
