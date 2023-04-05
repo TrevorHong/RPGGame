@@ -81,7 +81,7 @@ public class EnemyPatrol : MonoBehaviour
 
         Vector2 endPos = point.position + Vector3.right * castDist;
 
-        RaycastHit2D hit = Physics2D.Linecast(point.position, endPos, 1 << LayerMask.NameToLayer("Action"));
+        RaycastHit2D hit = Physics2D.Linecast(point.position, endPos, 1 << LayerMask.NameToLayer("Player"));
 
         Debug.DrawLine(point.position, endPos, Color.blue);
 
