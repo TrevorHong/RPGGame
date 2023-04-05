@@ -8973,7 +8973,7 @@ Animator:
   m_GameObject: {fileID: 1198278562}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1e50e1304db90684dbcb0537211adce3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2d5eff7c9e9f64941b4d4a40ce66818c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9997,7 +9997,7 @@ Animator:
   m_GameObject: {fileID: 1283352722}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 953595ab7269180489f96e2050e3daeb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 68015503e1d8b924cb6e76890dcbbb75, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -14572,7 +14572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786570140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.79, y: 11.69, z: 0}
+  m_LocalPosition: {x: 16, y: -0.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15725,7 +15725,7 @@ MonoBehaviour:
   walkingDirection: 1
   player: {fileID: 1786570144}
   chaseRange: 3
-  moveSpeed: 1.4
+  moveSpeed: 2
   point: {fileID: 1521140397}
 --- !u!61 &1912024637
 BoxCollider2D:
@@ -15751,7 +15751,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.15, y: 0.7}
+  m_Size: {x: 0.95, y: 0.7}
   m_EdgeRadius: 0
 --- !u!95 &1912024638
 Animator:
@@ -15763,7 +15763,7 @@ Animator:
   m_GameObject: {fileID: 1912024634}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6626c91cf84a2a948ad857475bb31734, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9930b81f3bcaf024eb288772dcb8286a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -16050,6 +16050,7 @@ GameObject:
   - component: {fileID: 1965268533}
   - component: {fileID: 1965268534}
   - component: {fileID: 1965268535}
+  - component: {fileID: 1965268536}
   m_Layer: 8
   m_Name: Slime
   m_TagString: Untagged
@@ -16083,7 +16084,7 @@ Animator:
   m_GameObject: {fileID: 1965268527}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9f5a3662558de7742b35849e22009936, type: 2}
+  m_Controller: {fileID: 9100000, guid: c3e6aca240536e643b972d406d366bbe, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -16203,6 +16204,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0155ba44bf5b824e81f4279207a033f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1965268536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965268527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf573096e1fed149b1579b9eab59fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitpoints: 2
+  hit: 0
+  enemy: {fileID: 1965268527}
+  animate: {fileID: 1965268529}
 --- !u!1 &1973868896
 GameObject:
   m_ObjectHideFlags: 0
