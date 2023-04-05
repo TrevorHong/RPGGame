@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -940.53, y: -519.06}
+  m_AnchoredPosition: {x: -939.94, y: -518.95}
   m_SizeDelta: {x: 4, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1114862
@@ -183,15 +183,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Use Arrow Keys to Move
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 153abddc956359947bfe63bcaa8d74a0, type: 2}
+  m_sharedMaterial: {fileID: 2865895112690236761, guid: 153abddc956359947bfe63bcaa8d74a0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2751,6 +2751,7 @@ MonoBehaviour:
   player: {fileID: 1786570144}
   chaseRange: 3
   moveSpeed: 0.75
+  point: {fileID: 0}
 --- !u!61 &348189649
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3918,6 +3919,7 @@ MonoBehaviour:
   player: {fileID: 1786570144}
   chaseRange: 5
   moveSpeed: 1.5
+  point: {fileID: 0}
 --- !u!114 &529181513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4023,6 +4025,7 @@ MonoBehaviour:
   player: {fileID: 1786570144}
   chaseRange: 3
   moveSpeed: 0.75
+  point: {fileID: 0}
 --- !u!61 &535538655
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7951,8 +7954,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -912.6, y: -519.31}
-  m_SizeDelta: {x: 4.8618, y: 0.7758}
+  m_AnchoredPosition: {x: -911.69, y: -518.46}
+  m_SizeDelta: {x: 3.9686, y: 0.7758}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1218780236
 MonoBehaviour:
@@ -7976,15 +7979,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: I wonder if I missed a platform earlier...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 153abddc956359947bfe63bcaa8d74a0, type: 2}
+  m_sharedMaterial: {fileID: 2865895112690236761, guid: 153abddc956359947bfe63bcaa8d74a0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -12468,7 +12471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786570140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.928, y: -2.251, z: 0}
+  m_LocalPosition: {x: -37.76, y: -2.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13914,6 +13917,7 @@ MonoBehaviour:
   player: {fileID: 1786570144}
   chaseRange: 4
   moveSpeed: 1.5
+  point: {fileID: 0}
 --- !u!114 &1965268535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14363,6 +14367,7 @@ MonoBehaviour:
   player: {fileID: 1786570144}
   chaseRange: 2
   moveSpeed: 1.75
+  point: {fileID: 0}
 --- !u!61 &1996803939
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14748,7 +14753,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -934.44, y: -519.06}
+  m_AnchoredPosition: {x: -934.68, y: -518.95}
   m_SizeDelta: {x: 4.5, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2123906938
@@ -14773,15 +14778,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press Up or Space to Jump
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 153abddc956359947bfe63bcaa8d74a0, type: 2}
+  m_sharedMaterial: {fileID: 2865895112690236761, guid: 153abddc956359947bfe63bcaa8d74a0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14798,8 +14803,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.3
-  m_fontSizeBase: 0.3
+  m_fontSize: 0.275
+  m_fontSizeBase: 0.275
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

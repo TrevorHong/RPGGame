@@ -17,6 +17,7 @@ public class EnemyPatrol : MonoBehaviour
     [SerializeField] public float moveSpeed;
     Vector2 chaseAmt;
 
+    [SerializeField] Transform point;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,16 +29,14 @@ public class EnemyPatrol : MonoBehaviour
     void Update()
     {
 
-            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-            
-            if (distanceToPlayer < chaseRange)
-            {
-                ChasePlayer();
-            }
-            else
-            {
-                StopChasing();
-            }
+        if (CanSeePlayer(chaseRange))
+        {
+            ChasePlayer();
+        }
+        else
+        {
+            StopChasing();
+        }
     }
 
     private void ChasePlayer()
@@ -68,6 +67,38 @@ public class EnemyPatrol : MonoBehaviour
         }
         transform.Translate(walkAmt);
         FlipSprite();
+    }
+
+    bool CanSeePlayer(float distance)
+    {
+        bool val = false;
+        float castDist = -distance;
+
+        if(isFacingRight)
+        {
+            castDist = distance;
+        }
+
+        Vector2 endPos = point.position + Vector3.right * castDist;
+
+        RaycastHit2D hit = Physics2D.Linecast(point.position, endPos, 1 << LayerMask.NameToLayer("Action"));
+
+        Debug.DrawLine(point.position, endPos, Color.blue);
+
+        if (hit.collider != null)
+        {
+            if(hit.collider.gameObject.CompareTag("Player"))
+            {
+                val = true;
+            }
+
+            else
+            {
+                val = false;
+            }
+            Debug.DrawLine(point.position, hit.point, Color.yellow);
+        }
+        return val;
     }
 
     private void FlipSprite()
