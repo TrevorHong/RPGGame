@@ -17,6 +17,7 @@ public class Attack : MonoBehaviour
     public LayerMask enemies;
     private float cooldown = 1.0f;
     private float attacktime = 0f;
+    public int damage = 1;
 
     [SerializeField] private AudioSource attackSound;
 
@@ -47,10 +48,11 @@ public class Attack : MonoBehaviour
 
         foreach (Collider2D enemy in attackhit)
         {
-            enemy.GetComponent<EnemyHit>().hitpoints -= 1;
+            //Magic magic = enemy.GetComponent<Magic>();
+            //magic.baramount += 20;
+            enemy.GetComponent<EnemyHit>().hitpoints -= damage;
             enemy.GetComponent<EnemyHit>().hit = true;
         }
-
     }
 
     private void OnDrawGizmosSelected()
