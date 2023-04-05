@@ -8893,7 +8893,8 @@ GameObject:
   - component: {fileID: 1198278566}
   - component: {fileID: 1198278565}
   - component: {fileID: 1198278564}
-  m_Layer: 0
+  - component: {fileID: 1198278568}
+  m_Layer: 8
   m_Name: Squid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8960,7 +8961,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0001, y: 0.0001}
+  m_Size: {x: 0.75, y: 0.66}
   m_EdgeRadius: 0
 --- !u!95 &1198278566
 Animator:
@@ -9034,6 +9035,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1198278568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198278562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf573096e1fed149b1579b9eab59fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitpoints: 3
+  hit: 0
+  enemy: {fileID: 1198278562}
+  animate: {fileID: 1198278566}
 --- !u!1 &1204203629
 GameObject:
   m_ObjectHideFlags: 0
@@ -9900,7 +9917,8 @@ GameObject:
   - component: {fileID: 1283352726}
   - component: {fileID: 1283352725}
   - component: {fileID: 1283352724}
-  m_Layer: 0
+  - component: {fileID: 1283352728}
+  m_Layer: 8
   m_Name: Coldeye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9952,7 +9970,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1283352722}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 960306d9507cad543a4354237647bea5, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -9967,7 +9985,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0001, y: 0.0001}
+  m_Size: {x: 0.7, y: 0.5}
   m_EdgeRadius: 0
 --- !u!95 &1283352726
 Animator:
@@ -10041,6 +10059,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1283352728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283352722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf573096e1fed149b1579b9eab59fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitpoints: 2
+  hit: 0
+  enemy: {fileID: 1283352722}
+  animate: {fileID: 1283352726}
 --- !u!1 &1301693561
 GameObject:
   m_ObjectHideFlags: 0
@@ -14424,7 +14458,7 @@ GameObject:
   - component: {fileID: 1786570150}
   - component: {fileID: 1786570152}
   - component: {fileID: 1786570153}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -14538,7 +14572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786570140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.37, y: 11.74, z: 0}
+  m_LocalPosition: {x: 33.79, y: 11.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15649,7 +15683,8 @@ GameObject:
   - component: {fileID: 1912024638}
   - component: {fileID: 1912024637}
   - component: {fileID: 1912024636}
-  m_Layer: 0
+  - component: {fileID: 1912024640}
+  m_Layer: 8
   m_Name: Drake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15716,7 +15751,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0001, y: 0.0001}
+  m_Size: {x: 1.15, y: 0.7}
   m_EdgeRadius: 0
 --- !u!95 &1912024638
 Animator:
@@ -15790,6 +15825,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1912024640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912024634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf573096e1fed149b1579b9eab59fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitpoints: 5
+  hit: 0
+  enemy: {fileID: 1912024634}
+  animate: {fileID: 1912024638}
 --- !u!1 &1913226314
 GameObject:
   m_ObjectHideFlags: 0
