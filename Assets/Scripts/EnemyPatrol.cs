@@ -14,7 +14,7 @@ public class EnemyPatrol : MonoBehaviour
 
     [SerializeField] Transform player;
     [SerializeField] float chaseRange;
-    [SerializeField] float moveSpeed;
+    [SerializeField] public float moveSpeed;
     Vector2 chaseAmt;
 
     // Start is called before the first frame update

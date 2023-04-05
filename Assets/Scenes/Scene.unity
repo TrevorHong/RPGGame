@@ -2750,11 +2750,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftBound: 0.6
   rightBound: 0.6
-  speed: 0.75
+  speed: 0.25
   walkingDirection: 1
   player: {fileID: 1786570144}
   chaseRange: 3
-  moveSpeed: 1.25
+  moveSpeed: 0.75
 --- !u!61 &348189649
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2795,6 +2795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitpoints: 3
   hit: 0
+  enemy: {fileID: 348189643}
   animate: {fileID: 348189645}
 --- !u!1 &349375715
 GameObject:
@@ -3421,7 +3422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 903.9408, y: 517.03986}
+  m_AnchoredPosition: {x: 903.85876, y: 517.08826}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &405131510
@@ -3961,6 +3962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitpoints: 5
   hit: 0
+  enemy: {fileID: 0}
   animate: {fileID: 529181508}
 --- !u!114 &529181515
 MonoBehaviour:
@@ -4030,6 +4032,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitpoints: 3
   hit: 0
+  enemy: {fileID: 535538651}
   animate: {fileID: 535538656}
 --- !u!114 &535538654
 MonoBehaviour:
@@ -4045,11 +4048,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftBound: 0.6
   rightBound: 0.4
-  speed: 0.75
+  speed: 0.25
   walkingDirection: 1
   player: {fileID: 1786570144}
   chaseRange: 3
-  moveSpeed: 1.25
+  moveSpeed: 0.75
 --- !u!61 &535538655
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12367,7 +12370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786570140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.3, y: 0.7, z: 0}
+  m_LocalPosition: {x: -37.55, y: -2.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14072,6 +14075,7 @@ GameObject:
   - component: {fileID: 1996803940}
   - component: {fileID: 1996803939}
   - component: {fileID: 1996803937}
+  - component: {fileID: 1996803941}
   m_Layer: 8
   m_Name: Mushroom
   m_TagString: Untagged
@@ -14160,11 +14164,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftBound: 3
   rightBound: 1
-  speed: 0.5
+  speed: 0.75
   walkingDirection: 1
   player: {fileID: 1786570144}
   chaseRange: 2
-  moveSpeed: 1.25
+  moveSpeed: 1.75
 --- !u!61 &1996803939
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14211,6 +14215,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1996803941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996803934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf573096e1fed149b1579b9eab59fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitpoints: 4
+  hit: 0
+  enemy: {fileID: 1996803934}
+  animate: {fileID: 1996803940}
 --- !u!1 &2005422275
 GameObject:
   m_ObjectHideFlags: 0
