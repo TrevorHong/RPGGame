@@ -4023,7 +4023,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529181507}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 54.655617, y: 0.37079072, z: 0.45479554}
+  m_LocalPosition: {x: 80.75, y: 12.41, z: 0.45479554}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13235,7 +13235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786570140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.25, y: 10.99, z: 0}
+  m_LocalPosition: {x: -37.928, y: -2.251, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13401,6 +13401,7 @@ MonoBehaviour:
   enemies:
     serializedVersion: 2
     m_Bits: 256
+  damage: 1
   attackSound: {fileID: 1786570149}
 --- !u!82 &1786570149
 AudioSource:
@@ -14540,6 +14541,7 @@ GameObject:
   - component: {fileID: 1965268529}
   - component: {fileID: 1965268533}
   - component: {fileID: 1965268534}
+  - component: {fileID: 1965268535}
   m_Layer: 8
   m_Name: Slime
   m_TagString: Untagged
@@ -14555,7 +14557,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965268527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.42, y: -2.19, z: 0}
+  m_LocalPosition: {x: 33.366, y: -2.149, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14679,6 +14681,18 @@ MonoBehaviour:
   player: {fileID: 1786570144}
   chaseRange: 4
   moveSpeed: 1.5
+--- !u!114 &1965268535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965268527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0155ba44bf5b824e81f4279207a033f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1973868896
 GameObject:
   m_ObjectHideFlags: 0
@@ -15038,7 +15052,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996803934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.57, y: -2.15, z: 0}
+  m_LocalPosition: {x: 23.599, y: -2.122, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
