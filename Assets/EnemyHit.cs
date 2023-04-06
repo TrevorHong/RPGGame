@@ -45,9 +45,9 @@ public class EnemyHit : MonoBehaviour
         EnemyPatrol patrol = enemy.GetComponent<EnemyPatrol>();
         patrol.moveSpeed = 0;
         animate.SetTrigger("death");
-        await Task.Delay(700);
+        await Task.Delay(1000);
         Destroy(enemy);
-        await Task.Delay(100);
+        await Task.Delay(300);
         //StartCoroutine(deathfade());
     }
 
