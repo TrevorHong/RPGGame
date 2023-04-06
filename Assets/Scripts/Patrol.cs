@@ -5,7 +5,6 @@ using UnityEngine;
 public class Patrol : MonoBehaviour
 {
 
-    public Transform bunny;
 
     public float leftBound;
     public float rightBound;
