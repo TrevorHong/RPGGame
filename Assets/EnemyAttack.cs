@@ -7,7 +7,7 @@ public class EnemyAttack : MonoBehaviour
     public EnemyProjectile prefab;
     public Transform shootpos;
 
-    public float cooldown = 10f;
+    public float cooldown = 5f;
     public float attacktime = 0f;
     // Start is called before the first frame update
     void Start()

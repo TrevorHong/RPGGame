@@ -4919,7 +4919,7 @@ GameObject:
   - component: {fileID: 529181508}
   - component: {fileID: 529181512}
   - component: {fileID: 529181513}
-  - component: {fileID: 529181515}
+  - component: {fileID: 529181514}
   m_Layer: 8
   m_Name: balrog
   m_TagString: Untagged
@@ -5033,7 +5033,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529181507}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 125.85, y: 3.93, z: 0.45479554}
+  m_LocalPosition: {x: 128.37, y: 2.57, z: 0.45479554}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5069,30 +5069,31 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529181507}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebf573096e1fed149b1579b9eab59fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hitpoints: 5
   hit: 0
-  enemy: {fileID: 0}
+  enemy: {fileID: 529181507}
   animate: {fileID: 529181508}
---- !u!114 &529181515
+--- !u!114 &529181514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529181507}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0589616cb4a3be24786f9223e03c87b6, type: 3}
+  m_Script: {fileID: 11500000, guid: b00fcc611fc5ed74bb9905afdf71ded8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  projectilespeed: 3
-  disappear: 5
+  prefab: {fileID: 8668619450378611566, guid: 0d219f3250d4eeb47adf0269464d7faa, type: 3}
+  shootpos: {fileID: 1701459557}
+  cooldown: 10
+  attacktime: 0
 --- !u!1 &535538651
 GameObject:
   m_ObjectHideFlags: 0
@@ -17243,7 +17244,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786570140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.09, y: 0.68, z: 0}
+  m_LocalPosition: {x: 42.18, y: 19.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -19,8 +19,9 @@ public class EnemyProjectile : MonoBehaviour
     void Update()
     {
         float time = Time.time;
-        if (time > disappear)
+        if (time < disappear)
         {
+            Debug.Log(time);
             Destroy(gameObject);
         }
     }
