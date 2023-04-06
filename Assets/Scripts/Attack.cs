@@ -19,6 +19,12 @@ public class Attack : MonoBehaviour
     private float attacktime = 0f;
     public int damage = 1;
 
+    public int maxmana = 45;
+    public int currentmana = 0;
+
+    public Projectile prefab;
+    public Transform shootpos;
+
     [SerializeField] private AudioSource attackSound;
 
     // Start is called before the first frame update
@@ -40,6 +46,11 @@ public class Attack : MonoBehaviour
             MeleeAttack();
             attacktime = timecheck;
         }
+
+        if(Input.GetButtonDown("Fire2") && (timecheck - attacktime) > cooldown && currentmana >= 15)
+        {
+            Magic();
+        }
     }
     void MeleeAttack()
     {
@@ -48,11 +59,16 @@ public class Attack : MonoBehaviour
 
         foreach (Collider2D enemy in attackhit)
         {
-            //Magic magic = enemy.GetComponent<Magic>();
-            //magic.baramount += 20;
+            currentmana += 5;
             enemy.GetComponent<EnemyHit>().hitpoints -= damage;
             enemy.GetComponent<EnemyHit>().hit = true;
         }
+    }
+
+    void Magic()
+    {
+        Instantiate(prefab, shootpos.position, transform.rotation);
+        currentmana -= 15;
     }
 
     private void OnDrawGizmosSelected()

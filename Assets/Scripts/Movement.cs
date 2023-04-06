@@ -124,9 +124,7 @@ public class Movement : MonoBehaviour
         if(isFacingRight && Move < 0f || !isFacingRight && Move > 0f)
         {
             isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
+            transform.Rotate(0f, 180f, 0f);
         }
     }
 }
