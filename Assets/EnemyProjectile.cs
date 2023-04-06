@@ -5,12 +5,11 @@ using UnityEngine;
 public class EnemyProjectile : MonoBehaviour
 {
 
-    [SerializeField] Transform player;
-
     public Rigidbody2D rb;
 
     public int projectilespeed;
 
+    public float disappear = 5;
     
     void Start()
     {
@@ -19,9 +18,10 @@ public class EnemyProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
+        float time = Time.time;
+        if (time > disappear)
+        {
+            Destroy(gameObject);
+        }
     }
 }
