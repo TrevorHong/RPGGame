@@ -4922,7 +4922,7 @@ GameObject:
   - component: {fileID: 529181514}
   m_Layer: 8
   m_Name: balrog
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5074,7 +5074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebf573096e1fed149b1579b9eab59fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoints: 5
+  hitpoints: 1
   hit: 0
   enemy: {fileID: 529181507}
   animate: {fileID: 529181508}
@@ -11415,7 +11415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebf573096e1fed149b1579b9eab59fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoints: 7
+  hitpoints: 2
   hit: 0
   enemy: {fileID: 1240290329}
   animate: {fileID: 1240290334}

@@ -15,9 +15,15 @@ public class Scene : MonoBehaviour
     }
 
     // Switch the scene from the death/winscreen to gamescreen
-    public void Replay()
+    public void ReplayFromDeathScreen()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    // Switch the scene from the winscreen to gamescreen
+    public void ReplayFromWinScreen()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 
     // Exits the game

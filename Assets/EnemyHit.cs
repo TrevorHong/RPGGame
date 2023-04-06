@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyHit : MonoBehaviour
 {
@@ -25,11 +26,24 @@ public class EnemyHit : MonoBehaviour
         {
             hitanimate();
         }
+        if (hitpoints == 0 && enemy.gameObject.CompareTag("Boss"))
+        {
+            bossdeath();
+        }
+
         if (hitpoints == 0)
         {
             death();
         }
     }
+
+    async void bossdeath()
+    {
+        death();
+        await Task.Delay(1000);
+        SceneManager.LoadScene("WinScreen");
+    }
+
     async void hitanimate()
     {
         animate.SetBool("damage", true);

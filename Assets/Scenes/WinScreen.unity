@@ -695,7 +695,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1421356381}
         m_TargetAssemblyTypeName: Scene, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: ReplayFromWinScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
