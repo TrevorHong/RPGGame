@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
+/// <summary>
+/// Teleports the player to another location upon touching the collider
+/// </summary>
 public class Teleport : MonoBehaviour
 {
     public Transform trs;

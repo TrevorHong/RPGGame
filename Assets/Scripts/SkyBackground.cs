@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// Changes the background to the Sky background upon entering the trigger
+/// </summary>
 public class SkyBackground : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)

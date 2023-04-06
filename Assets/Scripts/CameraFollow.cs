@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Makes the camera viewport always follow the player
+/// </summary>
 public class CameraFollow : MonoBehaviour
 {
     public GameObject Player;

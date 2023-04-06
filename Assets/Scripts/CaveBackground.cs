@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Changes the active background to Fungus on collision with the trigger
+/// </summary>
 public class CaveBackground : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)

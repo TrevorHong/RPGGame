@@ -6,10 +6,17 @@ using System.Security.Cryptography;
 using System.Threading.Tasks;
 using UnityEngine;
 
+
+/// <summary>
+/// Makes the Textures covering the cave entrance disappear when the player enters the trigger area
+/// </summary>
 public class CaveCoverCollider : MonoBehaviour
 {
     public GameObject mainObj;
 
+    /// <summary>
+    /// Sets the cover to be opaque at the beginning
+    /// </summary>
     void Start()
     {
         UnityEngine.Component[] trs = mainObj.GetComponentsInChildren<Transform>(true);
@@ -31,6 +38,9 @@ public class CaveCoverCollider : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Changes the transparency of the cave cover textures and fades them out over a period of time
+    /// </summary>
     async void FadeOut()
     {
         UnityEngine.Component[] trs = mainObj.GetComponentsInChildren<Transform>(true);

@@ -1,10 +1,10 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Security.Cryptography;
 using UnityEngine;
 
+
+/// <summary>
+/// Controls the movement of the ghost sprites to a random area
+/// </summary>
 public class GhostWalk : MonoBehaviour
 {
 
@@ -20,7 +20,9 @@ public class GhostWalk : MonoBehaviour
     private Vector2 walkAmt;
     private System.Random rnd= new System.Random();
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Calculates an initial destination and the lower bound of coordinates it can move to
+    /// </summary>
     void Start()
     {
         lowerX = transform.position.x - xBound;
@@ -30,7 +32,9 @@ public class GhostWalk : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Sets a new destination if the destination has been reached, otherwise move towards the destination
+    /// </summary>
     void Update()
     {
         if (Math.Round(transform.position.x, 3) == Math.Round(destX, 3))
@@ -53,6 +57,9 @@ public class GhostWalk : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Flips the sprites to the correct direction
+    /// </summary>
     private void FlipSprite()
     {
         if (isFacingRight && walkDirX < 0f || !isFacingRight && walkDirX > 0f)
