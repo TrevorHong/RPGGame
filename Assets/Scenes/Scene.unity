@@ -5092,7 +5092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 8668619450378611566, guid: 0d219f3250d4eeb47adf0269464d7faa, type: 3}
   shootpos: {fileID: 1701459557}
-  cooldown: 10
+  cooldown: 1
   attacktime: 0
 --- !u!1 &535538651
 GameObject:

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
@@ -28,6 +29,7 @@ public class EnemyAttack : MonoBehaviour
 
     void fireball()
     {
-        Instantiate(prefab, shootpos.position, transform.rotation);
+        Transform fab = Instantiate(prefab, shootpos.position, transform.rotation).GetComponent<Transform>();
+        fab.GetComponent<EnemyProjectile>().direction = gameObject.GetComponent<EnemyPatrol>().walkingDirection;
     }
 }

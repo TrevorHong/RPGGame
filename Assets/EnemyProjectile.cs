@@ -7,13 +7,15 @@ public class EnemyProjectile : MonoBehaviour
 
     public Rigidbody2D rb;
 
+    public float direction;
+
     public int projectilespeed;
 
     public float disappear = 5;
     
     void Start()
     {
-        rb.velocity = transform.right * projectilespeed;
+        rb.velocity = direction * transform.right * projectilespeed;
     }
     // Update is called once per frame
     void Update()
