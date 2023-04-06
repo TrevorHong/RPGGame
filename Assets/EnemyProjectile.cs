@@ -12,6 +12,8 @@ public class EnemyProjectile : MonoBehaviour
     public int projectilespeed;
 
     public float disappear = 5;
+
+    private float deltaTime;
     
     void Start()
     {
@@ -20,10 +22,9 @@ public class EnemyProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float time = Time.time;
-        if (time < disappear)
+        deltaTime += Time.deltaTime;
+        if (deltaTime > disappear)
         {
-            Debug.Log(time);
             Destroy(gameObject);
         }
     }
