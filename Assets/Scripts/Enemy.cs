@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Enemy movement
+/// </summary>
 public class Enemy : MonoBehaviour
 {
     private float moveSpeed = 2f;
