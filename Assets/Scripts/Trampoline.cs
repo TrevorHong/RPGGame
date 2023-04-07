@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to control trampoline bounce behaviour
+/// </summary>
 public class Trampoline : MonoBehaviour
 {
     public float jump;
@@ -10,6 +13,9 @@ public class Trampoline : MonoBehaviour
     [SerializeField] private AudioSource trampolineSound;
 
 
+    /// <summary>
+    /// Adds a set force to the player when they touch the trampoline
+    /// </summary>
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "Player")
@@ -21,6 +27,9 @@ public class Trampoline : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Adds a set force to the player when they stop touching the trampoline
+    /// </summary>
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.name == "Player")
