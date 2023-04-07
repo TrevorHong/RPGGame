@@ -4,6 +4,7 @@ using UnityEngine;
 
 /// <summary>
 /// Enemy patrol and chasing script.
+/// source: https://www.youtube.com/watch?v=ZExSz7x69j8&t=229s
 /// </summary>
 public class EnemyPatrol : MonoBehaviour
 {
