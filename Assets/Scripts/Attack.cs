@@ -8,6 +8,8 @@ public class Attack : MonoBehaviour
 {
     /// <summary>
     /// Player attack.
+    /// This tutorial helped early on in the development stage:
+    /// https://www.youtube.com/watch?v=sPiVz1k-fEs&t=420s&ab_channel=Brackeys
     /// </summary>
     public Animator animate;
     public Animator slash;

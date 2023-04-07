@@ -11,6 +11,11 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 
 {
+    /// <summary>
+    /// Controls player movement, Trampoline physics and Player Sprite Control
+    /// This tutorial helped early on in the development stage:
+    /// https://www.youtube.com/watch?v=dwcT-Dch0bA
+    /// </summary>
     private float Move;
     public float speed;
     public float jump;
@@ -38,7 +43,10 @@ public class Movement : MonoBehaviour
         
     }   
 
-    // Update is called once per frame
+    /// <summary>
+    /// Update is called once per frame, checks if the player can move first for invincibility frames. Also there is an update for jumping,
+    /// checks if player is on the ground and is not in a trampoline jump.
+    /// </summary>
     void Update()
     {
         if(canMove == true)
@@ -77,7 +85,10 @@ public class Movement : MonoBehaviour
 
     }
 
-
+    /// <summary>
+    /// This mainly checks with collision with the trampoline game object 
+    /// </summary>
+    /// <param name="collision"></param>
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name.Contains("Trampoline"))
@@ -113,12 +124,19 @@ public class Movement : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Returns true if the player is currently grounded and false if the player is not.
+    /// </summary>
+    /// <returns></returns>
     private bool isGrounded()
     {
         return Physics2D.OverlapCircle(new Vector3(groundCheck.position.x, groundCheck.position.y - 0.35f, groundCheck.position.z), 0.08f, groundLayer);
  
     }
 
+    /// <summary>
+    /// For flipping the sprite, rotates the entire sprite when the correct inputs are used.
+    /// </summary>
     private void FlipSprite()
     {
         if(isFacingRight && Move < 0f || !isFacingRight && Move > 0f)

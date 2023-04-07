@@ -37,7 +37,9 @@ public class Health : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Update is called once per frame. This checks for player death and changes the HP bar sprites based on an array of sprites.
+    /// </summary>
     void Update()
     {
         if (health == 0)
