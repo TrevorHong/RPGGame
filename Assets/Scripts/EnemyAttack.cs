@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
+    /// <summary>
+    /// Controls Enemy projectile attacks
+    /// </summary>
     public EnemyProjectile prefab;
     public Transform shootpos;
 
@@ -16,7 +19,9 @@ public class EnemyAttack : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Update is called once per frame. This checks thee current time to make sure that the enemy doesn't spam the projectile
+    /// </summary>
     void Update()
     {
         float time = Time.time;
@@ -27,6 +32,9 @@ public class EnemyAttack : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Creates the fireball, also flips the direction of the fireball based on the walking direction in enemy patrol
+    /// </summary>
     void fireball()
     {
         Transform fab = Instantiate(prefab, shootpos.position, transform.rotation).GetComponent<Transform>();
